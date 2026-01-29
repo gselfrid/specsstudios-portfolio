@@ -6,59 +6,180 @@
     --brd: #7cc3ff;
 }
 
-@media (max-width: 768px) {
-
-    html,
-    body{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
+@media screen and (max-width: 768px){
+    :root{
+        --bg: #150042;
+        --bglt: #774dea;
+        --title: #dbc8ff;
+        --text: #d2c0ff;
+        --brd: #7cc3ff;
     }
-
-        header {
-            gap: 1rem;
-            padding: 1rem;
-        }
     
-        header img {
-            width: 80px;
-        }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
     
-        header h1 a {
-            font-size: 1.8rem;
-        }
-
-        nav {
-            width: 100%;
-            max-width: 100%;
-        }
+    body{
+        margin: 0;
+        min-height: 100vh;
+        background-color: var(--bglt);
+        font-family: "Glass Antiqua", serif;
+    }
     
-        nav ul {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
+    /* ---------------- HEADER ---------------- */
     
-        nav a {
-            padding: 0.75rem;
-            font-size: 1rem;
-        }
-
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+    
+    header img{
+        width: 90px;
+    }
+    
+    h1{
+        margin: 0;
+        line-height: 1;
+    }
+    
+    h1 a{
+        color: var(--title);
+        text-decoration: none;
+        font-family: "Ribeye Marrow", serif;
+        font-size: 1.6rem;
+    }
+    
+    /* ---------------- NAV ---------------- */
+    
+    nav {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    nav a{
+        display: block;
+        text-align: center;
+        padding: 0.75rem;
+        border: 3px dotted var(--brd);
+        border-radius: 25px;
+        background-color: var(--bg);
+        color: var(--text);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    /* ---------------- MAIN ---------------- */
+    
     main {
         width: 100%;
+        padding: 0 1rem;
+        margin: 0 auto;
     }
-
-    p {
+    
+    /* ---------------- HEADINGS ---------------- */
+    
+    h2{
+        text-align: center;
+        font-family: "Ribeye Marrow", serif;
+        color: var(--title);
+        padding: 1.25rem;
+        margin: 2rem auto;
+        border: 3px dotted var(--brd);
+        background-color: var(--bg);
+        border-radius: 50px;
+    }
+    
+    /* ---------------- TEXT ---------------- */
+    
+    p{
+        max-width: 36ch;
+        margin: 0 auto 1.5rem;
+        text-align: center;
+        color: var(--text);
+        font-size: 1.05rem;
+        text-indent: 0;
+    }
+    
+    /* ---------------- SECTIONS ---------------- */
+    
+    section{
+        margin: 1.5rem auto;
+        padding: 1.25rem;
+        border: 2px dashed var(--brd);
+        background-color: var(--bg);
+        border-radius: 40px;
+    }
+    
+    /* ---------------- GRAPHIC / JOB SECTIONS ---------------- */
+    
+    .graexhead,
+    .jobhead {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    #graex img,
+    #irljob img {
         width: 100%;
+        max-width: 220px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #graex div,
+    #irljob div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    #graex h3,
+    #irljob h3{
+        font-family: "Ribeye Marrow", serif;
+        color: var(--title);
+    }
+    
+    #graex h4,
+    #irljob h4{
+        font-weight: bold;
         font-size: 1.1rem;
+        color: var(--title);
     }
-}
-
-@media (max-width: 768px) {
-    body {
-        background-color: red;
+    
+    #graex p,
+    #irljob p{
+        text-align: center;
     }
+    
+    /* ---------------- LISTS ---------------- */
+    
+    ul{
+        padding-left: 1rem;
+        color: var(--text);
+    }
+    
+    li{
+        padding: 0.25rem 0;
+    }
+    
 }
 
 body{
@@ -190,53 +311,6 @@ p{
     font-family: "Glass Antiqua", serif;
     color: var(--text);
     text-indent: 25px;
-}
-
-@media (max-width: 768px) {
-
-    /* Stack all grid layouts */
-    #graex div,
-    #irljob div {
-        grid-template-columns: 1fr;
-    }
-
-    /* Center headers with icons */
-    .graexhead,
-    .jobhead {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* Make images responsive */
-    #graex img,
-    #irljob img {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    /* Center sections */
-    #graex section,
-    #irljob section {
-        margin: 1rem auto;
-        width: 100%;
-    }
-
-    /* Paragraphs should fill the screen */
-    p {
-        width: 100%;
-        text-align: center;
-        text-indent: 0;
-    }
-
-    /* Headings should be centered on mobile */
-    h2 {
-        text-align: center;
-        margin: 2rem auto;
-    }
-
-    main {
-        width: 95%;
-    }
 }
 
 .graexhead{
