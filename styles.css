@@ -6,7 +6,7 @@
     --brd: #7cc3ff;
 }
 
-@media screen and (max-width: 480px){
+@media (min-width:320px) {
     :root{
         --bg: #150042;
         --bglt: #774dea;
