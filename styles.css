@@ -42,15 +42,23 @@
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
 
 body{
     margin: 0;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-image: linear-gradient(to bottom, var(--bg), var(--bglt)); */
     background-color: var(--bglt);
+}
+
+header,
+nav,
+main{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header {
