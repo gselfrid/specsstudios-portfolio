@@ -1,39 +1,83 @@
 :root{
     --bg: #150042;
-    --bglt: #6327ff;
-    --title: #b09fff;
-    --text: #fce7ff;
+    --bglt: #774dea;
+    --title: #dbc8ff;
+    --text: #d2c0ff;
     --brd: #7cc3ff;
 }
 
-body{
-    background-image: linear-gradient(to bottom, var(--bg),var(--bglt)); 
+@media (max-width: 768px) {
+
+
+        header {
+            gap: 1rem;
+            padding: 1rem;
+        }
+    
+        header img {
+            width: 80px;
+        }
+    
+        header h1 a {
+            font-size: 1.8rem;
+        }
+
+    nav ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    p {
+        width: 100%;
+        font-size: 1.1rem;
+    }
 }
 
 
-header{
-    width: 50%;
-    margin: 0 auto;
-    justify-content: center;
+body{
+    margin: 0;
+    min-height: 100vh;
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: linear-gradient(to bottom, var(--bg), var(--bglt)); */
+    background-color: var(--bglt);
+}
 
+header {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;        /* horizontal layout */
+    align-items: center;        /* vertical alignment */
+    justify-content: center;
+    gap: 2rem;
 }
 
 header img{
-    width: 30%;
-    height: 30%;
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+    align-content: center;
+    display: block;
 }
 
 header h1{
-    font-size: 2.5rem;
-    font-weight: bolder;
-    margin: 3rem;
+    text-align: left;
+    align-content: center;
+    margin: 0;
+    line-height: 1;
 }
 
-h1{
-    padding-top: 2rem;
-}
 
 h1 a{
     color: var(--title);
@@ -50,19 +94,19 @@ h1 a:hover{
     transition: 0.5s;
 }
 
-nav{
-    justify-content: center;
-    display: grid;
-    margin: 0 auto;
-    width: 50%;
+nav {
+    width: 100%;
+    max-width: 900px;
 }
 
-nav ul{
-    list-style-type: none;
+nav ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10rem;
-    padding-bottom: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
 }
 
 nav a{
@@ -76,6 +120,7 @@ nav a{
     padding: 1rem 2rem;
     border: 3px dotted var(--brd);
     border-radius: 25px;
+    background-color: var(--bg);
 }
 
 nav a:hover{
@@ -93,11 +138,10 @@ nav a:hover{
     transition-duration: 0.5s;
 }
 
-main{
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 h2{
@@ -107,14 +151,122 @@ h2{
     padding: 2rem;
     margin: 3rem auto;
     border: 3px dotted var(--brd);
+    background-color: var(--bg);
     border-radius: 50px;
 }
 
 p{
-    margin: auto;
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto;
+    text-align: left;
     width: 70%;
     font-size:larger;
     font-family: "Glass Antiqua", serif;
     color: var(--text);
     text-indent: 25px;
+}
+
+.graexhead{
+    display: flex;
+    align-items: center;
+}
+
+#graex h2{
+    text-align: left;
+    border:
+}
+
+#graex img{
+    width: 300px;
+    margin: auto;
+}
+
+#graex div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#graex section{
+    padding: 1.5rem;
+    margin: 1rem;
+    border: dashed 2px var(--brd);
+    background-color: var(--bg);
+    border-radius: 50px;
+}
+
+#graex h3{
+    font-family: "Ribeye Marrow", serif;
+    color: var(--title)
+}
+
+#graex h4{
+    font-family: "Glass Antiqua", serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: var(--title);
+}
+
+#graex p{
+    text-indent: 0;
+}
+
+#graex ul{
+    font-family: "Glass Antiqua", serif;
+    color: var(--text);
+}
+
+#graex li{
+    padding: 0.25rem;
+}
+
+.jobhead{
+    display: flex;
+    align-items: center;
+}
+
+#irljob h2{
+    text-align: left;
+}
+
+#irljob img{
+    width: 300px;
+    margin: auto;
+}
+
+#irljob div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#irljob section{
+    padding: 1.5rem;
+    margin: 1rem;
+    border: dashed 2px var(--brd);
+    background-color: var(--bg);
+    border-radius: 50px;
+}
+
+#irljob h3{
+    font-family: "Ribeye Marrow", serif;
+    color: var(--title)
+}
+
+#irljob h4{
+    font-family: "Glass Antiqua", serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: var(--title);
+}
+
+#irljob p{
+    text-indent: 0;
+}
+
+#irljob ul{
+    font-family: "Glass Antiqua", serif;
+    color: var(--text);
+}
+
+#irljob li{
+    padding: 0.25rem;
 }
