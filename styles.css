@@ -1,0 +1,120 @@
+:root{
+    --bg: #150042;
+    --bglt: #6327ff;
+    --title: #b09fff;
+    --text: #fce7ff;
+    --brd: #7cc3ff;
+}
+
+body{
+    background-image: linear-gradient(to bottom, var(--bg),var(--bglt)); 
+}
+
+
+header{
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
+
+}
+
+header img{
+    width: 30%;
+    height: 30%;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin: 3rem;
+}
+
+h1{
+    padding-top: 2rem;
+}
+
+h1 a{
+    color: var(--title);
+    font-size: larger;
+    text-decoration: none;
+    font-family: "Ribeye Marrow", serif;
+}
+
+h1 a:hover{
+    color: var(--text);
+    text-decoration: none;
+    font-family: "Ribeye Marrow", serif;
+    font-size: 150%;
+    transition: 0.5s;
+}
+
+nav{
+    justify-content: center;
+    display: grid;
+    margin: 0 auto;
+    width: 50%;
+}
+
+nav ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10rem;
+    padding-bottom: 2rem;
+}
+
+nav a{
+    font-family: "Glass Antiqua", serif;
+    align-items: center;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text);
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 3px dotted var(--brd);
+    border-radius: 25px;
+}
+
+nav a:hover{
+    font-family: "Glass Antiqua", serif;
+    align-items: center;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--bglt);
+    background-color: var(--title);
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    border: 2px solid var(--brd);
+    border-radius: 25px;
+    transition-duration: 0.5s;
+}
+
+main{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    font-family: "Ribeye Marrow", serif;
+    color: var(--title);
+    padding: 2rem;
+    margin: 3rem auto;
+    border: 3px dotted var(--brd);
+    border-radius: 50px;
+}
+
+p{
+    margin: auto;
+    width: 70%;
+    font-size:larger;
+    font-family: "Glass Antiqua", serif;
+    color: var(--text);
+    text-indent: 25px;
+}
