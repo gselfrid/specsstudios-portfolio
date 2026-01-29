@@ -166,6 +166,53 @@ p{
     text-indent: 25px;
 }
 
+@media (max-width: 768px) {
+
+    /* Stack all grid layouts */
+    #graex div,
+    #irljob div {
+        grid-template-columns: 1fr;
+    }
+
+    /* Center headers with icons */
+    .graexhead,
+    .jobhead {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Make images responsive */
+    #graex img,
+    #irljob img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Center sections */
+    #graex section,
+    #irljob section {
+        margin: 1rem auto;
+        width: 100%;
+    }
+
+    /* Paragraphs should fill the screen */
+    p {
+        width: 100%;
+        text-align: center;
+        text-indent: 0;
+    }
+
+    /* Headings should be centered on mobile */
+    h2 {
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+    main {
+        width: 95%;
+    }
+}
+
 .graexhead{
     display: flex;
     align-items: center;
