@@ -24,7 +24,7 @@
     }
 
     h3{
-        font-size: 100%;
+        font-size: 90%;
     }
 
     nav ul{
@@ -171,6 +171,7 @@ p{
     max-width: 800px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #graex h2,
@@ -234,4 +235,59 @@ p{
 #graex,
 #irljob{
     max-width: 800px;
+}
+
+.storenav {
+    margin: 4rem auto;
+    padding: auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.storenav a{
+    font-family: "Glass Antiqua", serif;
+    align-items: center;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    color: var(--bglt);
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 3px solid var(--bg);
+    border-radius: 25px;
+    background-color: var(--text);
+}
+
+.storenav a:hover{
+    font-family: "Glass Antiqua", serif;
+    align-items: center;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--bglt);
+    background-color: var(--title);
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    border: 2px solid var(--brd);
+    border-radius: 25px;
+    transition-duration: 0.5s;
+}
+
+.non{
+    text-align: center;
+    font-family: "Glass Antiqua", serif;
+    font-size: 150%;
+    margin: 5rem 7rem;
+    padding: 2rem;
+    background-color: var(--title);
+    border: 5px solid var(--bg);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
